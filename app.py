@@ -85,7 +85,7 @@ with chart_col2:
 st.markdown("---")
 
 # Main Interface Splits (Ledger Comparison Table vs Action Panel)
-col_left, col_right = st.columns()
+col_left, col_right = st.columns(2)
 
 with col_left:
     st.subheader("📋 All Monitored Constituency Submissions")
