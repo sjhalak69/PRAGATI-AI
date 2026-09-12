@@ -90,7 +90,7 @@ if sb_col2.button("🚪 Logout Securely", use_container_width=True):
     st.session_state.username = None
     st.rerun()
 
-st.title("🏛️ DRISHTI AI - Central Management Console")
+st.title("🏛️ PRAGATI-AI (Predictive Risk Assessment & Governance Analytics for Tracking Infrastructure)")
 st.markdown("---")
 
 # --- REST OF ARCHITECTURE LAYOUTS (METRICS, CHARTS, TABLES) ---
