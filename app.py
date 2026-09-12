@@ -5,7 +5,7 @@ import os
 from engine import get_audited_data
 
 # 1. Page Configuration for Government Executive Styling
-st.set_page_config(layout="wide", page_title="Drishti AI - Secure Login")
+st.set_page_config(layout="wide", page_title="PRAGATI-AI (Predictive Risk Assessment & Governance Analytics for Tracking Infrastructure)")
 
 # --- SESSION STATE INITIALIZATION ---
 if "logged_in" not in st.session_state:
@@ -48,8 +48,8 @@ if not st.session_state.logged_in:
     _, login_col, _ = st.columns([1, 2, 1])
     
     with login_col:
-        st.markdown("<h1 style='text-align: center;'>🏛️ DRISHTI AI</h1>", unsafe_allow_html=True)
-        st.markdown("<h3 style='text-align: center; color: gray;'>National Autonomous Auditing Portal</h3>", unsafe_allow_html=True)
+        st.markdown("<h1 style='text-align: center;'>🏛️ PRAGATI-AI </h1>", unsafe_allow_html=True)
+        st.markdown("<h3 style='text-align: center; color: gray;'>(Predictive Risk Assessment & Governance Analytics for Tracking Infrastructure)</h3>", unsafe_allow_html=True)
         st.markdown("<p style='text-align: center; font-size: 13px; color: #777;'>Connected to MeriPehchaan Single Sign-On (NSSO)</p>", unsafe_allow_html=True)
         
         st.markdown("---")
