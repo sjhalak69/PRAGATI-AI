@@ -68,6 +68,20 @@ col3.metric("🚨 Active Red Flags", red_flag_count)
 
 st.markdown("---")
 
+# --- NEW: ADD A MANUAL DATABASE RESET BUTTON HERE ---
+st.markdown(" ")
+if st.button("🔄 Reset Demo Database (Restore All Red Flags)"):
+    conn = sqlite3.connect("mplad_scheme.db")
+    cursor = conn.cursor()
+    
+    # Force drop the table and let the self-healing engine recreate it fresh
+    cursor.execute("DROP TABLE IF EXISTS projects;")
+    conn.commit()
+    conn.close()
+    
+    st.success("Database cleanly re-initialized! Restoring traps...")
+    st.rerun() # Refresh page state to bring the red flags back instantly
+
 # --- EXECUTIVE DATA VISUALIZATIONS ---
 st.subheader("📊 Executive Data Visualizations")
 chart_col1, chart_col2 = st.columns(2)
